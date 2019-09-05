@@ -8,9 +8,8 @@ pids
 *.seed
 *.pid.lock
 
-generated
-
-prisma.yml
-
-
 *.env
+
+generated
+prisma.yml
+package-lock.json
