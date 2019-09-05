@@ -12,4 +12,5 @@ generated
 
 prisma.yml
 
+
 *.env
