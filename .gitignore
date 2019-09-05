@@ -11,3 +11,5 @@ pids
 generated
 
 prisma.yml
+
+.env
