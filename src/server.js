@@ -4,11 +4,12 @@ import logger from 'morgan';
 import schema from './schema';
 import { authenticateJwt } from './passport';
 import './env';
+import { isAuthenticated } from './middlewares';
 
 const { PORT } = process.env;
 const server = new GraphQLServer({
   schema,
-  context: ({ request }) => ({ request }),
+  context: ({ request }) => ({ request, isAuthenticated }),
 });
 
 server.express.use(logger('dev'));
