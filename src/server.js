@@ -5,11 +5,12 @@ import schema from './schema';
 import { authenticateJwt } from './passport';
 import './env';
 import { isAuthenticated } from './middlewares';
+import { prisma } from '../generated/prisma-client';
 
 const { PORT } = process.env;
 const server = new GraphQLServer({
   schema,
-  context: ({ request }) => ({ request, isAuthenticated }),
+  context: ({ request }) => ({ request, isAuthenticated, prisma }),
 });
 
 server.express.use(logger('dev'));
