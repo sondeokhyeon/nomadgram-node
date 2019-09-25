@@ -13,6 +13,7 @@
     "dotenv": "^8.1.0",
     "graphql-tools": "^4.0.5",
     "graphql-yoga": "^1.18.3",
+    "helmet": "^3.21.1",
     "jsonwebtoken": "^8.5.1",
     "merge-graphql-schemas": "^1.7.0",
     "morgan": "^1.9.1",
@@ -35,6 +36,6 @@
     "deploy": "prisma deploy",
     "generate": "prisma generate",
     "prisma": "yarn run deploy && yarn run generate",
-    "dev": "nodemon --exec babel-node src/server.js"
+    "dev": "nodemon --delay 2 --exec babel-node src/server.js"
   }
 }
