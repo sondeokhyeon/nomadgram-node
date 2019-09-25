@@ -1,6 +1,8 @@
+import { ROOM_FRAGMENT } from '../../../fragments';
+
 export default {
   Query: {
-    seeRooms: (_, __, { request, isAuthenticated, prisma }) => {
+    seeRooms: async (_, __, { request, isAuthenticated, prisma }) => {
       isAuthenticated(request);
       const { user } = request;
       return prisma.rooms({
@@ -9,7 +11,7 @@ export default {
             id: user.id,
           },
         },
-      });
+      }).$fragment(ROOM_FRAGMENT);
     },
   },
 };
