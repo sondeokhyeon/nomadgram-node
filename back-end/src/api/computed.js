@@ -18,7 +18,7 @@ export default {
         return false;
       }
     },
-    itsSelf: (parent, _, { request }) => {
+    itSelf: (parent, _, { request }) => {
       const { user } = request;
       const { id: parentId } = parent;
       return user.id === parentId;
