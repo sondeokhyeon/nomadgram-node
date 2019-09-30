@@ -11,8 +11,8 @@ export default {
     lightGreyColor: "#c7c7c7",
     boxBorder: `${BOX_BORDER}`,
     borderRadius : `${BORDER_RADIUS}`,
-    whiteBox : `${BORDER_RADIUS};
-                ${BOX_BORDER};
+    whiteBox : `border:${BORDER_RADIUS};
+                border-radius:${BOX_BORDER};
                 background-color:white;
                 `
 }   
