@@ -63,7 +63,7 @@ export default ( {
         <Button text={"Log in"} />
       </form>
     )} 
-    {action === "signup" && (
+    {action === "signUp" && (
        <form onSubmit={onSubmit}>
        <Input placeholder={"First name"} {...firstName}/>
        <Input placeholder={"Last name"}  {...lastName} />
@@ -74,7 +74,7 @@ export default ( {
     )}
     {action === "confirm" && (
        <form onSubmit={onSubmit}>
-       <Input placeholder={"paste your secret"}    required {...secret}  />
+       <Input placeholder={"paste your secret"}  required {...secret}  />
        <Button text={"Confirm"} />
      </form>
     )}
