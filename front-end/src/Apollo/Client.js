@@ -6,6 +6,9 @@ export default new ApploClient({
     clientState: {
         defaults,
         resolvers
-      }
+    },
+    headers: {
+      Authorization : `Bearer ${localStorage.getItem('token')}`
+    }
 });
 
