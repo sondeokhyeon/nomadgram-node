@@ -23,7 +23,7 @@ export const sendMail = (email) => {
 
 export const sendSecretMail = (adress, secret) => {
   const email = {
-    from: 'mrson@noamdgram.com',
+    from: 'mrson@nomadgram.com',
     to: adress,
     subject: 'Login secret for nomadgram',
     html: `hello your login secret it <b>${secret}</b>`,
